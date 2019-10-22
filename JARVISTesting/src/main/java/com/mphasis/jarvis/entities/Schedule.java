@@ -30,7 +30,7 @@ public class Schedule {
 	@Id
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator = "sche_seq")
 	@GenericGenerator(name = "sche_seq", 
-	strategy = "com.mphasis.jarvis.entities.StringPrefixedSequenceIdGenerator", 
+	strategy = "com.mphasis.jarvis.util.StringPrefixedSequenceIdGenerator", 
 	parameters = {
 	@Parameter(name = StringPrefixedSequenceIdGenerator.INCREMENT_PARAM, value = "5"),
 	@Parameter(name = StringPrefixedSequenceIdGenerator.VALUE_PREFIX_PARAMETER, value = "SC_"),
