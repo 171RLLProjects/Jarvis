@@ -36,9 +36,9 @@ public class Passenger {
 	private int passengerAge;
 	@Column(length=10,nullable=false)
 	private String passengerGender;
-	@Column(length=10,nullable=false)
+	@Column(length=5,nullable=false)
 	private int passengerSeatno;
-	@Column(length=10,columnDefinition="date default sysdate")
+	@Column(length=35,columnDefinition="date default sysdate")
 	private String bookingDate;
 	@OneToOne
 	@JoinColumn(name="passportNum")
@@ -47,7 +47,7 @@ public class Passenger {
 	@JoinColumn(name="flightId")
 	private Flight flight;
 	
-	@Column(length=10) 
+	@Column(length=10,nullable=false, columnDefinition="default varchar 'booked'",insertable=false) 
 	private String passengerStatus;
 	
 	

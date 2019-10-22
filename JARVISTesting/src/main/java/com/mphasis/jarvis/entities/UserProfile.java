@@ -23,7 +23,7 @@ public class UserProfile {
 	@Parameter(name = StringPrefixedSequenceIdGenerator.NUMBER_FORMAT_PARAMETER, value = "%02d") })
 	@Column(updatable = false, nullable = false) 
 	private String userId;
-	@Column(length=10,nullable=false)
+	@Column(length=10,nullable=false, unique=true)
 	private String userName;
 	@Column(length=10,nullable=false)
 	private String userPass;

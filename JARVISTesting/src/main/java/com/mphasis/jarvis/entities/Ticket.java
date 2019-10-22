@@ -8,11 +8,15 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
+import org.hibernate.annotations.DynamicInsert;
+import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Parameter;
 
 import com.mphasis.jarvis.util.StringPrefixedSequenceIdGenerator;
 @Entity
+@DynamicInsert
+@DynamicUpdate
 public class Ticket {
 	
 
@@ -27,7 +31,7 @@ public class Ticket {
 @Column(updatable = false, nullable = false) 
 private String ticketId;
 
-	@Column(length=10) 
+	@Column(length=10,nullable=false, columnDefinition="default varchar 'booked'",insertable=false) 
 	private String ticketStatus;
 
 

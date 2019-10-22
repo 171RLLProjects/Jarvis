@@ -1,5 +1,7 @@
 package com.mphasis.jarvis.entities;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -18,9 +20,9 @@ public class Passport {
 	@Id
 	private String passportId;
 	@Column(length=10,nullable=false)
-	private String issueDate;
+	private Date issueDate;
 	@Column(length=10,nullable=false)
-	private String expiryDate;
+	private Date expiryDate;
 	@Column(length=10,nullable=false)
 	private String country;
 
@@ -31,16 +33,16 @@ public class Passport {
 	public void setPassportId(String passportId) {
 		this.passportId = passportId;
 	}
-	public String getIssueDate() {
+	public Date getIssueDate() {
 		return issueDate;
 	}
-	public void setIssueDate(String issueDate) {
+	public void setIssueDate(Date issueDate) {
 		this.issueDate = issueDate;
 	}
-	public String getExpiryDate() {
+	public Date getExpiryDate() {
 		return expiryDate;
 	}
-	public void setExpiryDate(String expiryDate) {
+	public void setExpiryDate(Date expiryDate) {
 		this.expiryDate = expiryDate;
 	}
 	public String getCountry() {
