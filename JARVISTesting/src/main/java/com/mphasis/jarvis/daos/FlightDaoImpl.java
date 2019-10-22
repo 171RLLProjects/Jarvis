@@ -112,7 +112,7 @@ public class FlightDaoImpl implements FlightDao{
 		cr1.add(Restrictions.eq("scheduleDate",sdate));
 		List<Schedule> schedueles=cr1.list();
 		System.out.println("scheuldes");
-			 schedueles.forEach((s)->System.out.println(s.getScheduleId()));
+			// schedueles.forEach((s)->System.out.println(s.getScheduleId()));
 			 Criteria cr2=session.createCriteria(Flight.class);
 			 cr2.add(Restrictions.and(Restrictions.eq("route",route), Restrictions.in("schedule", schedueles)));
 		List<Flight> flights= cr2.list();
