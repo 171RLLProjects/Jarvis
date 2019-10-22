@@ -1,6 +1,5 @@
 package com.mphasis.jarvis.entities;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,10 +12,8 @@ import javax.persistence.OneToOne;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.GenericGenerator;
-import org.hibernate.annotations.ManyToAny;
 import org.hibernate.annotations.Parameter;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.mphasis.jarvis.util.StringPrefixedSequenceIdGenerator;
 
 @Entity
@@ -27,7 +24,7 @@ public class Passenger {
 	@Id
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator = "pas_seq")
 	@GenericGenerator(name = "pas_seq", 
-	strategy = "com.mphasis.jarvis.entities.StringPrefixedSequenceIdGenerator", 
+	strategy = "com.mphasis.jarvis.util.StringPrefixedSequenceIdGenerator", 
 	parameters = {
 	@Parameter(name = StringPrefixedSequenceIdGenerator.INCREMENT_PARAM, value = "1"),
 	@Parameter(name = StringPrefixedSequenceIdGenerator.VALUE_PREFIX_PARAMETER, value = "PS_"),
@@ -49,6 +46,18 @@ public class Passenger {
 	@ManyToOne
 	@JoinColumn(name="flightId")
 	private Flight flight;
+	
+	@Column(length=10) 
+	private String passengerStatus;
+	
+	
+	
+	public String getPassengerStatus() {
+		return passengerStatus;
+	}
+	public void setPassengerStatus(String passengerStatus) {
+		this.passengerStatus = passengerStatus;
+	}
 	public String getPassengerId() {
 		return passengerId;
 	}
@@ -92,7 +101,4 @@ public class Passenger {
 	public void setPassport(Passport passport) {
 		this.passport = passport;
 	}
-	
-
-	
 }
