@@ -36,7 +36,7 @@ public class Flight {
 	@Id
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator = "fl_seq")
 	@GenericGenerator(name = "fl_seq", 
-	strategy = "com.mphasis.jarvis.entities.StringPrefixedSequenceIdGenerator", 
+	strategy = "com.mphasis.jarvis.util.StringPrefixedSequenceIdGenerator", 
 	parameters = {
 	@Parameter(name = StringPrefixedSequenceIdGenerator.INCREMENT_PARAM, value = "10"),
 	@Parameter(name = StringPrefixedSequenceIdGenerator.VALUE_PREFIX_PARAMETER, value = "FL_"),

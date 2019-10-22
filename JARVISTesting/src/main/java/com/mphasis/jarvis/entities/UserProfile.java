@@ -16,7 +16,7 @@ public class UserProfile {
 	@Id
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator = "use_seq")
 	@GenericGenerator(name = "use_seq", 
-	strategy = "com.mphasis.jarvis.entities.StringPrefixedSequenceIdGenerator", 
+	strategy = "com.mphasis.jarvis.util.StringPrefixedSequenceIdGenerator", 
 	parameters = {
 	@Parameter(name = StringPrefixedSequenceIdGenerator.INCREMENT_PARAM, value = "1"),
 	@Parameter(name = StringPrefixedSequenceIdGenerator.VALUE_PREFIX_PARAMETER, value = "CU_"),

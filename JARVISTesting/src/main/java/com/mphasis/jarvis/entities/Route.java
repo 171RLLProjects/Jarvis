@@ -28,7 +28,7 @@ public class Route {
 	@Id
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator = "route_seq")
 	@GenericGenerator(name = "route_seq", 
-	strategy = "com.mphasis.jarvis.entities.StringPrefixedSequenceIdGenerator", 
+	strategy = "com.mphasis.jarvis.util.StringPrefixedSequenceIdGenerator", 
 	parameters = {
 	@Parameter(name = StringPrefixedSequenceIdGenerator.INCREMENT_PARAM, value = "10"),
 	@Parameter(name = StringPrefixedSequenceIdGenerator.VALUE_PREFIX_PARAMETER, value = "RO_"),
