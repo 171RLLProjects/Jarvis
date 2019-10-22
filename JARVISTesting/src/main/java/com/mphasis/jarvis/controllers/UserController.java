@@ -95,7 +95,7 @@ public class UserController {
 		}
 		return ResponseEntity.accepted().body(userProfile);
 	}
-	@RequestMapping(value="/logout")
+	@RequestMapping(value="/ulogout")
     public ResponseEntity<Void> logoutUser(HttpSession session){
         session.removeAttribute("userName");
         session.invalidate();

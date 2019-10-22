@@ -79,7 +79,7 @@ public class AdminController {
 	}
 
 
-	@RequestMapping(value="/logout")
+	@RequestMapping(value="/alogout")
 	public ResponseEntity<Void> logoutAdmin(HttpSession session){
 		session.removeAttribute("adminName");
 		session.invalidate();
