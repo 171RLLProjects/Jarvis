@@ -1,0 +1,38 @@
+<form (ngSubmit)="ser()">
+  <div class="form-group">
+    <label>Source :</label><br />
+  </div>
+  <input type="text" name="source" placeholder="source" [(ngModel)]="sourceId" />
+  <div class="form-group">
+    <label>Destination:</label><br />
+    <input type="text" name="destination" placeholder="destination" [(ngModel)]="destinationId" />
+  </div>
+
+
+  <div class="form-group">
+    <label>Schedule Date</label><br />
+    <input type="text" name="schedule" placeholder="schedule" [(ngModel)]="scheduleId">
+  </div>
+  
+  <input type="submit" value="search">
+</form>
+
+<table>
+  <tr>
+    <td>Flight Id</td>
+    <td>Flight Name</td>
+    <td>Total Seat</td>
+    <td>Available Seat</td>
+    <td>Flight Type</td>
+    <td>Schedule Time</td>
+  </tr>
+  <tr *ngFor='let fl of flights'>
+    <td>{{fl.flightId}}</td>
+    <td>{{fl.flightName}}</td>
+    <td>{{fl.totalSeat}}</td>
+    <td>{{fl.availableSeat}}</td>
+    <td>{{fl.flightType}}</td>
+    <td>{{fl.schedule.scheduleTime}}</td>
+    <td><button class="btn btn-primary" (click)="book(fl)">Book Flight</button></td>
+  </tr>
+</table>

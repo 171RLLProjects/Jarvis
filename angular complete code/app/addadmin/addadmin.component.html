@@ -1,0 +1,22 @@
+<form (ngSubmit)="addAdmin()"class="form-group">
+ 
+<div class="form-group">
+<label>Admin Id    :</label>
+<input type="text"name="adminId"placeholder="adminId"[(ngModel)]="admin.adminId"disabled>
+</div>
+ 
+<div class="form-group">
+<label>Enter Name:</label>
+<input type="text"name="adminName"placeholder="adminName"[(ngModel)]="admin.adminName">
+</div>
+
+
+<div class="form-group">
+<label>Enter Password:</label>
+<input type="text"name="adminPass"placeholder="adminPass"[(ngModel)]="admin.adminPass">
+</div>
+<div class="btn btn-primary">
+<input type="submit"value="Add Admin">
+</div>
+</form>
+

@@ -1,0 +1,52 @@
+<table align="center">
+    <style>
+        thead {color:black;}
+        tbody {color:rgb(12, 12, 12);}   
+        table{
+          border-collapse: collapse;
+          width: 40%;
+        }     
+        table, th, td {
+         
+          text-align: left;
+          padding: 8px;
+        }
+        th {
+       background-color: rgb(235, 80, 52);
+       color: white;
+       }
+        tr:nth-child(odd) {background-color: #f2f2f2;}
+        tr:nth-child(even) {background-color: yellowgreen}
+        button{
+          background-color:darkorange;
+        }
+        </style>
+<thead>
+    <tr>
+      
+      <th>Flight Id</th>&nbsp;
+      <th>Flight Name</th>&nbsp;
+      <th>Total Seat</th>&nbsp;
+      <th>Available Seat</th>&nbsp;
+      <th>Flight Type</th>&nbsp;
+      <th>Route Id</th>&nbsp;
+      <th>Schedule Id</th>&nbsp;
+      <th colspan="2"></th>&nbsp;
+   
+    </tr>
+    </thead>  
+   
+    <tbody>
+    <tr *ngFor='let fl of flight'>
+        <td>{{fl.flightId}}</td> &nbsp;
+        <td>{{fl.flightName}}</td> &nbsp;
+        <td>{{fl.totalSeat}}</td> &nbsp;
+        <td>{{fl.availableSeat}}</td>&nbsp; 
+        <td>{{fl.flightType}}</td> &nbsp;
+        <td>{{fl.route.routeId}}</td> &nbsp;
+        <td>{{fl.schedule.scheduleId}}</td>&nbsp;
+       <td><button class="btn btn-primary" (click)="edit(fl)">Edit</button></td>
+        <td><button class="btn btn-primary" (click)="delete(fl)">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>

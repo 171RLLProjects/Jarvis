@@ -1,0 +1,46 @@
+<table align="center">
+<style>
+thead {color:black;}
+
+tbody {color:rgb(12, 12, 12);}  
+
+table{
+border-collapse: collapse;
+width: 40%;
+        }     
+table, th, td {
+
+text-align: left;
+padding: 8px;
+        }
+th {
+background-color: rgb(235, 80, 52);
+color: white;
+       }
+tr:nth-child(odd) {background-color: #f2f2f2;}
+tr:nth-child(even) {background-color: yellowgreen}
+button{
+background-color:darkorange;
+        }
+</style>
+<thead>
+<tr>
+<th>ScheduleId</th>&nbsp;
+<th>ScheduleDate</th>&nbsp;
+<th>ScheduleTime</th>&nbsp;
+<th colspan="2">Options</th>
+
+</tr>
+</thead>
+<tbody>
+<tr *ngFor='let s of schedule'>
+<td>{{s.scheduleId}}</td>&nbsp;
+<td>{{s.scheduleDate}}</td>&nbsp;
+<td>{{s.scheduleTime}}</td>&nbsp;
+<td><button class="btn btn-primary" (click)="edit(s)">Edit</button></td>
+<td><button class="btn btn-primary" (click)="delete(s)">Delete</button></td>
+</tr>
+</tbody>
+</table>
+
+

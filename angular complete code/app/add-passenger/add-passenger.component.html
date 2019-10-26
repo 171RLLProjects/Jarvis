@@ -1,0 +1,54 @@
+<div class="row">
+ 
+  <div class="col-md-6 col-md-offset-2">
+    <h1>Passenger Details </h1>
+  
+<form (ngSubmit)="AddPassenger()" class="form-group">
+  <div class="form-group">
+    <label>Passenger Id</label><br/>
+    <input type="text" name="passengerId" [(ngModel)]="passenger.passengerId" class="form-controller" disabled>
+  </div>
+  <div class="form-group">
+    <label>Passenger Name</label><br/>
+    <input type="text" name="passengerName" [(ngModel)]="passenger.passengerName" class="form-controller"> <br/><br/>
+   </div>
+  
+  <div class="form-group">
+    <label>Passenger Age</label><br/>
+    <input type="number" name="passengerAge" [(ngModel)]="passenger.passengerAge" class="form-controller"> <br/><br/>
+  </div>
+
+<div class="form-group">
+  <label>Passenger Gender:</label><br/>
+  <input type="radio" name="passengerGender" value="male" [(ngModel)]="passenger.passengerGender" class="form-controller">Male<br/>
+  <input type="radio" name="passengerGender" value="female" [(ngModel)]="passenger.passengerGender" class="form-controller">Female<br/>
+</div>
+  <div class="form-group">
+    <label>Passenger SeatNo</label><br/>
+    <input type="number" name="passengerSeatNo" [(ngModel)]="passenger.passengerSeatNo" class="form-controller"> <br/><br/>
+  </div>
+
+
+  <div class="form-group">
+    <label>PassportNum</label><br/>
+    <input type="number" name="passportNum" [(ngModel)]="passenger.passportNum" class="form-controller"> <br/><br/>
+  </div>
+
+  
+  <div class="form-group">
+    <label>FlightId</label><br/>
+    <input type="text" name="flightName" [(ngModel)]="flightId" [value]="flightId" class="form-controller" disabled>
+ <br/><br/>
+  </div>
+
+
+
+
+
+
+<div class="btn btn-primary">
+  <input type="submit" value="Submit" class="form-controller">
+</div>
+  </form>
+  </div>
+  </div>

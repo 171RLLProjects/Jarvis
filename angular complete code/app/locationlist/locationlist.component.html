@@ -1,0 +1,37 @@
+<style>
+  thead {color:black;}
+  tbody {color:rgb(12, 12, 12);}   
+  table{
+    border-collapse: collapse;
+    width: 40%;
+  }     
+  table, th, td {
+   
+    text-align: center;
+    padding: 8px;
+  }
+  th {
+ background-color: rgb(59, 217, 245);
+ color: white;
+ }
+  tr:nth-child(odd) {background-color: #f2f2f2;}
+  tr:nth-child(even) {background-color: lightgray}
+  button{
+    background-color:darkorange;
+  }
+  </style> 
+
+<table align="center">
+  <thead>
+  <tr>
+    <th>Location Id</th>
+    <th>Location name</th>
+  </tr>
+</thead>
+  <tr *ngFor='let loc of locations'>
+    <td>{{loc.locationId}}</td>
+    <td>{{loc.locationName}}</td>
+    <td><button class="btn btn-primary" (click)="edit(loc)" >Edit</button></td>
+    <td><button class="btn btn-primary" (click)="delete(loc)">Delete</button></td>
+  </tr>
+</table>

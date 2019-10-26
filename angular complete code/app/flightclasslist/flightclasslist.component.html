@@ -1,0 +1,16 @@
+<table>
+  <tr>
+    <td>FlightCLass Id</td>
+    <td>FlightCLass</td>
+    <td>Number Of Seats</td>
+    <td>FLight Id</td>
+  </tr>
+  <tr *ngFor='let f of fl '>
+      <td>{{f.flightClassId}}</td>
+      <td>{{f.flightclass}}</td>
+      <td>{{f.numberOfSeats}}</td>
+      <td>{{f.flight.flightId}}</td>
+      <td><button class="btn btn-primary" (click)="edit(f)">Edit</button></td>
+      <td><button class="btn btn-primary" (click)="delete(f)">Delete</button></td>
+    </tr>
+</table>

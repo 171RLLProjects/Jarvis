@@ -1,0 +1,36 @@
+<form (ngSubmit)="addRouter()" class="form-group">
+    <div class="form-group">
+    <label>Route Id</label>
+    <input type="text" name="routeId" [(ngModel)]="route.routeId" class="form-control" disabled>
+    </div>
+    <div class="form-group">
+    <label>Route distance</label>
+    <input type="number" name="distance" [(ngModel)]="route.distance" class="form-control">
+    </div>
+    <div class="form-group">
+    <label>Duration</label>
+    <input type="text" name="duration" [(ngModel)]="route.duration" class="form-control">
+    </div>
+    <div class="from-group">
+      <label for="Location" class="control-label">Source</label>
+      <select id="source" required #source="ngModel" name="source" [(ngModel)]="locationId1" class="form-control">
+          <option value="-1">Select Source</option>
+          <option *ngFor='let source of locations' [value]="source.locationId">
+              {{source.locationName}}
+          </option>
+      </select>
+    </div>
+    <div class="from-group">
+      <label for="Location" class="control-label">Department</label>
+      <select id="destination" required #destination="ngModel" name="destination" [(ngModel)]="locationId2" class="form-control">
+          <option value="-1">Select Destination</option>
+          <option *ngFor='let destination of locations' [value]="destination.locationId">
+              {{destination.locationName}}
+          </option>
+      </select>
+    </div>
+    <div class="form-group">
+    <input type="submit" value="add Route" class="form-controller">
+    <br/><br/>
+    </div>
+    </form>

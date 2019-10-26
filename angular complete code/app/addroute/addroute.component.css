@@ -1,0 +1,18 @@
+input {
+    align-content: center;
+    border: none;
+    border: 1px solid red;
+    width: 500px;
+    padding: 7px;
+  margin:0px; 
+  }
+  select{
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+   border:1px solid red;
+  padding: 7px;
+  margin:0px; 
+    outline: none;  
+    width: 500px;
+}

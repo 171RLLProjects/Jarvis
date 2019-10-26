@@ -1,0 +1,13 @@
+table{
+    background-color: pink;
+  font-family: verdana,arial,sans-serif;
+  font-size:19px;
+  color:#333333;
+  border-width: 1px;
+  border-color:red;
+  border-collapse: collapse;
+}
+button{
+  background-color: crimson;
+  border-color:black;
+}

@@ -1,0 +1,29 @@
+<style>
+    .btn{
+      background-color:rgb(43, 194, 144);
+     
+    }
+  </style>
+ 
+<form (ngSubmit)="addSchedule()" class="form-group">
+  
+    <div class="form-group">
+        <label>Schedule Id :</label><br>
+        <input type="text" name="scheduleId" placeholder="scheduleId" [(ngModel)]="schedule.scheduleId" disabled>
+      </div>
+ 
+  <div class="form-group">
+    <label>Enter Date:</label><br>
+    <input type="text" name="scheduleDate" placeholder="dd/mm/yyy" [(ngModel)]="schedule.scheduleDate">    
+    </div>
+  
+  
+    <div class="form-group">
+      <label>Enter Time:</label><br>
+      <input type="text" name="scheduleTime" placeholder="hh:mm:ss am/pm" [(ngModel)]="schedule.scheduleTime">
+    </div>
+ 
+    <div class="btn btn-primary">
+      <input type="submit" value="Add Schedule">
+      </div>
+</form>

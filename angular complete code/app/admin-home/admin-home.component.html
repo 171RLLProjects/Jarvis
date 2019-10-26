@@ -1,0 +1,98 @@
+
+
+  <div style="padding:15px" >
+  <div class="navbar">
+ <ul class="nav nav-tabs">
+ <li routerLinkActive="active"><a routerLink=''>Home</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+
+ <div class="dropdown">
+ <button class="dropbtn">Location 
+</button>
+<div class="dropdown-content">
+ <li ><a routerLink='addlocation'>Add Location</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+ <li ><a routerLink='listlocation'>list Location</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+</div>
+</div>
+<div class="dropdown">
+<button class="dropbtn">Route 
+</button>
+<div class="dropdown-content">
+ <li routerLinkActive="active"><a routerLink='addroute'>Add Route</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+ <li routerLinkActive="active"><a routerLink='listroute'>list route</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+ </div>
+</div>
+
+<div class="dropdown">
+    <button class="dropbtn">Schedule
+   </button>
+   <div class="dropdown-content">
+    <li ><a routerLink='addschedule'>Add Schedule</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+    <li ><a routerLink='listschedule'>List Schedule</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+   </div>
+   </div>
+
+
+
+<div class="dropdown">
+    <button class="dropbtn">Flight 
+   </button>
+   <div class="dropdown-content">
+    <li ><a routerLink='addflight'>Add Flight</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+    <li ><a routerLink='listflight'>List Flight</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+   </div>
+   </div>
+
+
+   <div class="dropdown">
+      <button class="dropbtn">Flight Class
+     </button>
+     <div class="dropdown-content">
+      <li ><a routerLink='addflightclass'>Add Flight Class</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+      <li ><a routerLink='listflightclass'>List Flight Class</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+     </div>
+     </div>
+
+
+
+  
+   <div class="dropdown">
+      <button class="dropbtn">Passenger
+     </button>
+     <div class="dropdown-content">
+      <li ><a routerLink='listpassenger'>All Passenger</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+     </div>
+     </div>
+
+
+     <div class="dropdown">
+        <button class="dropbtn">UserList
+       </button>
+       <div class="dropdown-content">
+        <li ><a routerLink='listuser'>All Users</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+       </div>
+       </div>
+
+
+
+       <div class="dropdown">
+            <button class="dropbtn">Add Admin
+           </button>
+           <div class="dropdown-content">
+            <li ><a routerLink='addadmin'>Add Here</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+           </div>
+           </div>
+        
+    
+    
+         <li><a (click)="logout()">Logout</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+        
+        
+ </ul>
+ </div>
+ <br/><br/>
+ 
+ <router-outlet></router-outlet>
+ 
+ </div>
+
+

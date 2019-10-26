@@ -1,0 +1,64 @@
+<div class="row">
+ 
+  <div class="col-md-6 col-md-offset-2">
+    <h1>Flight Details</h1>
+  
+<form (ngSubmit)="AddFlight()" class="form-inline">
+  <div class="form-group">
+    <label>Flight Id</label>
+    <input type="text" name="flightId" [(ngModel)]="flight.flightId" class="form-controller" disabled>
+  </div>
+  <div class="form-group">
+    <label>Flight Name</label>
+    <input type="text" name="flightName" [(ngModel)]="flight.flightName" class="form-controller"> <br/><br/>
+   </div>
+  
+  <div class="form-group">
+    <label>Total Seat</label>
+    <input type="number" name="totalSeat" [(ngModel)]="flight.totalSeat" class="form-controller"> <br/><br/>
+  </div>
+  <div class="form-group">
+    <label>Available Seat</label>
+    <input type="number" name="availableSeat" [(ngModel)]="flight.availableSeat" class="form-controller"> <br/><br/>
+  </div>
+  
+  <div class="form-group">
+    <label for="flightType" class="control-label">FlightType</label>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <select id="flightType" name="flightType" [(ngModel)]="flight.flightType"
+            class="form-control">
+          <option value="-1">select</option>
+          <option value="International">International</option>
+          <option value="Domestic">Domestic</option>
+          </select>
+  </div>
+
+<div class="form-group">
+  <label for="route" class="control-label">RouteName</label>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<select id="route" name="route" [(ngModel)]="routeId1"
+          class="form-control">
+        <option value="-1">select Route</option>
+        <option *ngFor='let route of route' [value]="route.routeId">{{route.routeId}}</option>
+        </select>
+</div>
+
+
+<div class="form-group">
+  <label for="schedule" class="control-label">ScheduleDate</label>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<select id="schedule" name="schedule" [(ngModel)]="scheduleId1"
+          class="form-control">
+        <option value ="-1">select</option>
+        <option *ngFor='let schedule of schedule' [value]="schedule.scheduleId">{{schedule.scheduleDate}}</option>
+        </select>
+</div>
+
+<div class="form-group">
+  <input type="submit" value="Submit" class="form-controller">
+</div>
+
+
+  </form>
+  </div>
+  </div>

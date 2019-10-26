@@ -1,0 +1,27 @@
+<form (ngSubmit)="addflightclass()" class="form-inline">
+  <div class="form-group">
+<label>FlightClass id</label>
+<input type="number" name="flightClassId" [(ngModel)]="fl.flightClassId" class="form-controller" disabled ><br/><br/>
+</div>
+<div class="form-group">
+<label>Flightclass</label>
+<input type="text" name="flightclass" [(ngModel)]="fl.flightclass" class="form-controller"><br/><br/>
+</div>
+<div class="form-group">
+  <label>Number Of seats</label>
+  <input type="number" name="numberOfSeats" [(ngModel)]="fl.numberOfSeats" class="form-controller"><br/><br/>
+  </div>
+ 
+  <div class="form-group">
+      <label for="flight" class="control-label">Flight</label>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <select id="flight" name="flightId" [(ngModel)]="flightId1"
+              class="form-control">
+            <option value="-1">select flight</option>
+            <option *ngFor='let flight of flight' [value]="flight.flightId">{{flight.flightId}}</option>
+            </select>
+  </div>
+  <div class="form-group">
+  <input type="submit" value="Add" class="form-controller">
+  </div>
+</form>

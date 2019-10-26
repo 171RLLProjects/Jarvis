@@ -1,0 +1,18 @@
+<table>
+  <tr>
+    <td>Route id</td>
+    <td>Distance</td>
+    <td>Duration</td>
+    <td>Source</td>
+    <td>Destination</td>
+  </tr>
+  <tr *ngFor='let route of routes'>
+    <td>{{route.routeId}}</td>
+    <td>{{route.distance}}</td>
+    <td>{{route.duration}}</td>
+    <td>{{route.source.locationName}}</td>
+    <td>{{route.destination.locationName}}</td>
+    <td><button class="btn btn-primary" (click)="edit(route)">Edit</button>
+    <button class="btn btn-primary" (click)="delete(route)">delete</button></td>
+  </tr>
+</table>

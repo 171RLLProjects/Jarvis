@@ -1,0 +1,26 @@
+<table>
+<tr>
+<td>Passenger Id</td>
+<td>Passenger Name</td>
+<td>Passenger Age</td>
+<td>Passenger Gender</td>
+<td>Booking Date</td>
+<td>Passenger SeatNo</td>
+<td>Passenger Status</td>
+<td>Flight Id</td>
+<td>Passport Number</td>
+</tr>
+ 
+<tr *ngFor='let passeng of passenger'>
+<td>{{passeng.passengerId}}</td>
+<td>{{passeng.passengerName}}</td>
+<td>{{passeng.passengerAge}}</td>
+<td>{{passeng.passengerGender}}</td>
+<td>{{passeng.bookingDate}}</td>
+<td>{{passeng.passengerSeatno}}</td>
+<td>{{passeng.passengerStatus}}</td>
+<td>{{passeng.flight.flightId}}</td>
+<td>{{passeng.passportNum}}</td>
+</tr>
+</table>
+

@@ -1,0 +1,21 @@
+<table>
+  <tr>
+    <td>Flight Id</td>
+    <td>Flight Name</td>
+    <td>Total Seat</td>
+    <td>Available Seat</td>
+    <td>Flight Type</td>
+    <td>Route Id</td>
+    <td>Schedule Id</td>
+    </tr>
+  <tr *ngFor='let fl of flight'>
+      <td>{{fl.flightId}}</td>
+      <td>{{fl.flightName}}</td>
+      <td>{{fl.totalSeat}}</td>
+      <td>{{fl.availableSeat}}</td>
+      <td>{{fl.flightType}}</td>
+      <td>{{fl.route.sourceId}}</td>
+      <td>{{fl.route.destination}}</td>
+      <td>{{fl.schedule.scheduleDate}}</td>
+    </tr>
+</table>

@@ -1,0 +1,30 @@
+<div class="row">
+ 
+    <div class="col-md-6 col-md-offset-2">
+      <h1>User Login </h1>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="userName">User Name:</label>
+          <input type="text" [(ngModel)]="userName" class="form-control" formControlName="userName" id="userName">
+          <div *ngIf="submitted && loginForm.controls.userName.errors" class="error">
+            <div *ngIf="loginForm.controls.userName.errors.required">username is required</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="userPass">Password:</label>
+          <input type="password" class="form-control" [(ngModel)]="userPass" formControlName="userPass" id="userPass">
+          <div *ngIf="submitted && loginForm.controls.userPass.errors" class="error">
+            <div *ngIf="loginForm.controls.userPass.errors.required">Password is required</div>
+            
+          </div>
+        </div>
+          <div class="form-group">
+              <button [disabled]="loading" class="btn btn-primary">
+                  <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                  Login
+              </button>
+              <a routerLink="register" class="btn btn-link">Register</a>
+          </div>
+      </form>
+    </div>
+ </div>
